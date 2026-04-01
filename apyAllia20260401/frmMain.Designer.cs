@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             this.maskedTxtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.tableProductos = new System.Windows.Forms.TableLayoutPanel();
             this.btnCargar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.panelProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFondo)).BeginInit();
             this.tableProductos.SuspendLayout();
@@ -53,10 +55,10 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblTitulo.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
-            this.lblTitulo.Location = new System.Drawing.Point(-2, 0);
+            this.lblTitulo.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblTitulo.Location = new System.Drawing.Point(-5, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(416, 29);
             this.lblTitulo.TabIndex = 0;
@@ -67,6 +69,7 @@
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblCodigo.Location = new System.Drawing.Point(6, 3);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(96, 29);
@@ -77,6 +80,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblNombre.Location = new System.Drawing.Point(6, 58);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(108, 29);
@@ -87,6 +91,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblDescripcion.Location = new System.Drawing.Point(6, 113);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(152, 29);
@@ -97,6 +102,7 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblPrecio.Location = new System.Drawing.Point(6, 197);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(85, 29);
@@ -107,6 +113,7 @@
             // 
             this.lblStock.AutoSize = true;
             this.lblStock.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStock.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblStock.Location = new System.Drawing.Point(6, 245);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(80, 29);
@@ -124,6 +131,7 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblCategoria.Location = new System.Drawing.Point(6, 295);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(127, 29);
@@ -154,7 +162,7 @@
             // 
             // panelProductos
             // 
-            this.panelProductos.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panelProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panelProductos.Controls.Add(this.tableProductos);
             this.panelProductos.Controls.Add(this.lblTitulo);
             this.panelProductos.Location = new System.Drawing.Point(38, 28);
@@ -192,8 +200,9 @@
             // 
             // maskedTxtCodigo
             // 
+            this.maskedTxtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.maskedTxtCodigo.Location = new System.Drawing.Point(172, 6);
-            this.maskedTxtCodigo.Mask = "99999";
+            this.maskedTxtCodigo.Mask = "99999-999";
             this.maskedTxtCodigo.Name = "maskedTxtCodigo";
             this.maskedTxtCodigo.Size = new System.Drawing.Size(105, 20);
             this.maskedTxtCodigo.TabIndex = 15;
@@ -201,6 +210,7 @@
             // 
             // tableProductos
             // 
+            this.tableProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tableProductos.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
             this.tableProductos.ColumnCount = 2;
             this.tableProductos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.70854F));
@@ -231,14 +241,25 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCargar.BackColor = System.Drawing.Color.YellowGreen;
             this.btnCargar.Font = new System.Drawing.Font("Verdana", 18F);
             this.btnCargar.Location = new System.Drawing.Point(38, 416);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(407, 43);
+            this.btnCargar.Size = new System.Drawing.Size(204, 43);
             this.btnCargar.TabIndex = 15;
-            this.btnCargar.Text = "Cargar Producto";
+            this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = false;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.Orange;
+            this.btnModificar.Font = new System.Drawing.Font("Verdana", 18F);
+            this.btnModificar.Location = new System.Drawing.Point(248, 416);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(197, 43);
+            this.btnModificar.TabIndex = 16;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
             // 
             // frmMain
             // 
@@ -246,10 +267,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(496, 480);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.panelProductos);
             this.Controls.Add(this.picFondo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de Productos";
             this.panelProductos.ResumeLayout(false);
             this.panelProductos.PerformLayout();
@@ -279,5 +305,6 @@
         private System.Windows.Forms.MaskedTextBox maskedTxtStock;
         private System.Windows.Forms.TableLayoutPanel tableProductos;
         private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
