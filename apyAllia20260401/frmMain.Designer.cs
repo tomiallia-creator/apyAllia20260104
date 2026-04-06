@@ -40,16 +40,22 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.cmbGestion = new System.Windows.Forms.ComboBox();
             this.panelProductos = new System.Windows.Forms.Panel();
-            this.picFondo = new System.Windows.Forms.PictureBox();
+            this.tableProductos = new System.Windows.Forms.TableLayoutPanel();
+            this.maskedTxtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.maskedTxtStock = new System.Windows.Forms.MaskedTextBox();
             this.maskedTxtPrecio = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTxtCodigo = new System.Windows.Forms.MaskedTextBox();
-            this.tableProductos = new System.Windows.Forms.TableLayoutPanel();
+            this.picFondo = new System.Windows.Forms.PictureBox();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblCargados = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.panelProductos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFondo)).BeginInit();
             this.tableProductos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFondo)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -57,7 +63,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblTitulo.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblTitulo.ForeColor = System.Drawing.Color.Gray;
             this.lblTitulo.Location = new System.Drawing.Point(-5, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(416, 29);
@@ -69,7 +75,7 @@
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblCodigo.ForeColor = System.Drawing.Color.Gray;
             this.lblCodigo.Location = new System.Drawing.Point(6, 3);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(96, 29);
@@ -80,7 +86,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblNombre.ForeColor = System.Drawing.Color.Gray;
             this.lblNombre.Location = new System.Drawing.Point(6, 58);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(108, 29);
@@ -91,7 +97,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblDescripcion.ForeColor = System.Drawing.Color.Gray;
             this.lblDescripcion.Location = new System.Drawing.Point(6, 113);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(152, 29);
@@ -102,7 +108,7 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblPrecio.ForeColor = System.Drawing.Color.Gray;
             this.lblPrecio.Location = new System.Drawing.Point(6, 197);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(85, 29);
@@ -113,7 +119,7 @@
             // 
             this.lblStock.AutoSize = true;
             this.lblStock.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblStock.ForeColor = System.Drawing.Color.Gray;
             this.lblStock.Location = new System.Drawing.Point(6, 245);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(80, 29);
@@ -125,17 +131,17 @@
             this.txtNombre.Location = new System.Drawing.Point(172, 61);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(173, 20);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 8;
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblCategoria.ForeColor = System.Drawing.Color.Gray;
             this.lblCategoria.Location = new System.Drawing.Point(6, 295);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(127, 29);
-            this.lblCategoria.TabIndex = 8;
+            this.lblCategoria.TabIndex = 6;
             this.lblCategoria.Text = "Categoria";
             // 
             // txtDescripcion
@@ -165,48 +171,10 @@
             this.panelProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panelProductos.Controls.Add(this.tableProductos);
             this.panelProductos.Controls.Add(this.lblTitulo);
-            this.panelProductos.Location = new System.Drawing.Point(38, 28);
+            this.panelProductos.Location = new System.Drawing.Point(38, 12);
             this.panelProductos.Name = "panelProductos";
             this.panelProductos.Size = new System.Drawing.Size(407, 382);
             this.panelProductos.TabIndex = 13;
-            // 
-            // picFondo
-            // 
-            this.picFondo.Image = global::apyAllia20260401.Properties.Resources.ChatGPT_Image_1_abr_2026__09_19_20;
-            this.picFondo.Location = new System.Drawing.Point(1, -3);
-            this.picFondo.Name = "picFondo";
-            this.picFondo.Size = new System.Drawing.Size(499, 486);
-            this.picFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFondo.TabIndex = 14;
-            this.picFondo.TabStop = false;
-            // 
-            // maskedTxtStock
-            // 
-            this.maskedTxtStock.Location = new System.Drawing.Point(172, 248);
-            this.maskedTxtStock.Mask = "99999";
-            this.maskedTxtStock.Name = "maskedTxtStock";
-            this.maskedTxtStock.Size = new System.Drawing.Size(105, 20);
-            this.maskedTxtStock.TabIndex = 13;
-            this.maskedTxtStock.ValidatingType = typeof(int);
-            // 
-            // maskedTxtPrecio
-            // 
-            this.maskedTxtPrecio.Location = new System.Drawing.Point(172, 200);
-            this.maskedTxtPrecio.Mask = "99999";
-            this.maskedTxtPrecio.Name = "maskedTxtPrecio";
-            this.maskedTxtPrecio.Size = new System.Drawing.Size(105, 20);
-            this.maskedTxtPrecio.TabIndex = 14;
-            this.maskedTxtPrecio.ValidatingType = typeof(int);
-            // 
-            // maskedTxtCodigo
-            // 
-            this.maskedTxtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.maskedTxtCodigo.Location = new System.Drawing.Point(172, 6);
-            this.maskedTxtCodigo.Mask = "99999-999";
-            this.maskedTxtCodigo.Name = "maskedTxtCodigo";
-            this.maskedTxtCodigo.Size = new System.Drawing.Size(105, 20);
-            this.maskedTxtCodigo.TabIndex = 15;
-            this.maskedTxtCodigo.ValidatingType = typeof(int);
             // 
             // tableProductos
             // 
@@ -237,51 +205,139 @@
             this.tableProductos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableProductos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableProductos.Size = new System.Drawing.Size(401, 347);
-            this.tableProductos.TabIndex = 16;
+            this.tableProductos.TabIndex = 0;
+            // 
+            // maskedTxtCodigo
+            // 
+            this.maskedTxtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.maskedTxtCodigo.Location = new System.Drawing.Point(172, 6);
+            this.maskedTxtCodigo.Mask = "99999-999";
+            this.maskedTxtCodigo.Name = "maskedTxtCodigo";
+            this.maskedTxtCodigo.Size = new System.Drawing.Size(105, 20);
+            this.maskedTxtCodigo.TabIndex = 7;
+            this.maskedTxtCodigo.ValidatingType = typeof(int);
+            // 
+            // maskedTxtStock
+            // 
+            this.maskedTxtStock.Location = new System.Drawing.Point(172, 248);
+            this.maskedTxtStock.Mask = "99999";
+            this.maskedTxtStock.Name = "maskedTxtStock";
+            this.maskedTxtStock.Size = new System.Drawing.Size(105, 20);
+            this.maskedTxtStock.TabIndex = 11;
+            this.maskedTxtStock.ValidatingType = typeof(int);
+            // 
+            // maskedTxtPrecio
+            // 
+            this.maskedTxtPrecio.Location = new System.Drawing.Point(172, 200);
+            this.maskedTxtPrecio.Mask = "99999";
+            this.maskedTxtPrecio.Name = "maskedTxtPrecio";
+            this.maskedTxtPrecio.Size = new System.Drawing.Size(105, 20);
+            this.maskedTxtPrecio.TabIndex = 10;
+            this.maskedTxtPrecio.ValidatingType = typeof(int);
+            // 
+            // picFondo
+            // 
+            this.picFondo.Image = global::apyAllia20260401.Properties.Resources.ChatGPT_Image_1_abr_2026__09_19_20;
+            this.picFondo.Location = new System.Drawing.Point(1, -3);
+            this.picFondo.Name = "picFondo";
+            this.picFondo.Size = new System.Drawing.Size(492, 581);
+            this.picFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFondo.TabIndex = 14;
+            this.picFondo.TabStop = false;
             // 
             // btnCargar
             // 
             this.btnCargar.BackColor = System.Drawing.Color.YellowGreen;
             this.btnCargar.Font = new System.Drawing.Font("Verdana", 18F);
-            this.btnCargar.Location = new System.Drawing.Point(38, 416);
+            this.btnCargar.Location = new System.Drawing.Point(41, 397);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(204, 43);
             this.btnCargar.TabIndex = 15;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // btnModificar
+            // btnCancelar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.Orange;
-            this.btnModificar.Font = new System.Drawing.Font("Verdana", 18F);
-            this.btnModificar.Location = new System.Drawing.Point(248, 416);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(197, 43);
-            this.btnModificar.TabIndex = 16;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnCancelar.BackColor = System.Drawing.Color.Red;
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 18F);
+            this.btnCancelar.Location = new System.Drawing.Point(248, 397);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(197, 43);
+            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.lblInfo);
+            this.panel1.Controls.Add(this.lblCargados);
+            this.panel1.Location = new System.Drawing.Point(42, 446);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(403, 120);
+            this.panel1.TabIndex = 17;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::apyAllia20260401.Properties.Resources.ChatGPT_Image_1_abr_2026__09_19_20;
+            this.pictureBox1.Location = new System.Drawing.Point(1, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(492, 581);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblCargados
+            // 
+            this.lblCargados.AutoSize = true;
+            this.lblCargados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblCargados.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargados.ForeColor = System.Drawing.Color.Gray;
+            this.lblCargados.Location = new System.Drawing.Point(-6, 0);
+            this.lblCargados.Name = "lblCargados";
+            this.lblCargados.Size = new System.Drawing.Size(418, 29);
+            this.lblCargados.TabIndex = 17;
+            this.lblCargados.Text = "--------- Datos Cargados ---------";
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblInfo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.Gray;
+            this.lblInfo.Location = new System.Drawing.Point(3, 41);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(14, 16);
+            this.lblInfo.TabIndex = 18;
+            this.lblInfo.Text = "-";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(496, 480);
-            this.Controls.Add(this.btnModificar);
+            this.ClientSize = new System.Drawing.Size(490, 578);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.panelProductos);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picFondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestion de Productos";
+            this.Text = "Gestión de Productos";
             this.panelProductos.ResumeLayout(false);
             this.panelProductos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFondo)).EndInit();
             this.tableProductos.ResumeLayout(false);
             this.tableProductos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFondo)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,6 +361,10 @@
         private System.Windows.Forms.MaskedTextBox maskedTxtStock;
         private System.Windows.Forms.TableLayoutPanel tableProductos;
         private System.Windows.Forms.Button btnCargar;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblCargados;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
